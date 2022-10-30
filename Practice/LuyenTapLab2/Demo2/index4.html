@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form >
+        <input type="text" name="firstName" placeholder="First Name" onchange="logEvent()"><br>
+        <input type="text" name="lastName" placeholder="Last Name" onblur="logEvent()"><br>
+        <input type="button" onclick="sendInfo()" value="Submit"><br> 
+    </form>
+  
+    <h3 id="welcom"></h3>
+
+
+    <script>
+         function sendInfo() {
+            var inputs = event.target.parentElement;
+        
+            document.getElementById("welcom").innerHTML = ("Chào mừng " +inputs["firstName"].value + " "+ inputs["lastName"].value); 
+        }
+        function logEvent() {
+                var p = event.target;
+                if(p.name == 'firstName'){
+                    document.getElementById("welcom").innerHTM = "First name changed to"+p.value;
+                    alert("dfd");
+                }else {
+                    document.getElementById("welcom").innerHTM = "Last name changed to"+p.value;
+                    alert("dfddgd");
+                }
+            }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 bài 3</title>
+   
+    <style>
+        .formSlide{
+            margin: 0 auto;
+            text-align: center;
+            width: 1000px;
+            padding: 20px;
+ 
+        }
+        .formSlide .boxImg{
+            margin: 0 auto;
+            margin-top: 10px;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            width: 650px;
+            height: 340px;
+            box-shadow: 0 0 4px gray;
+            color: rgb(0, 0, 0);
+            outline: none;
+            
+        }
+        .formSlide .boxImg img{
+            width: 650px;
+            height: 340px;
+            background-size: 100% 100%;
+        }
+        .formSlide .buttonGroup{
+            margin-top: 10px;
+        } 
+        .formSlide .buttonGroup button{
+            border: none;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            padding: 10px 17px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            border-radius: 4px;
+            border: 2px solid #edb6c4;
+            margin-right: 10px;
+        }
+        .formSlide .buttonGroup button:hover{
+            box-shadow: 2px 5px 5px 0 #edb6c4, 0 17px 20px 0 #edb6c4; 
+            background-color: #edb6c4; 
+        
+        }
+ 
+    </style>
+</head >
+<body onload="loadImg()">
+    <div class="formSlide" >    
+        <div class="boxImg">        
+            <img id="showImg"  src="imgs/anh0.jpg" >
+        </div>
+        <div class="buttonGroup">
+            <button onclick="first()">FIRST</button>
+            <button onclick="back()">BACK</button>
+          
+            <button onclick="next()">NEXT</button>
+            <button onclick="final()">FINAL</button>
+        </div>
+
+    </div>
+    <script src="lab6.js"></script>
+</body>
+</html>

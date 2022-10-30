@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="my-form">
+        <input type="text" name="firstName" placeholder="First Name"><br>
+        <input type="text" name="lastName" placeholder="Last Name"><br> 
+        <div id="sothich">Bạn có sở thích gì!</div>
+        <input type="checkbox" name="test" value="Ăn"> Ăn<br>
+        <input type="checkbox" name="test" value="Ngủ">Ngủ<br>
+        <input type="checkbox" name="test" value="Chơi">Chơi<br>
+        <input type="button" onclick="sendInfo()" value="Submit"><br> 
+    </form>
+
+  
+
+    <h3 id="welcom"></h3>
+    <script>
+        function sendInfo() {
+            var inputs = event.target.parentElement;
+            var ipByindex = inputs[0];
+            var ipName = inputs["firstName"];
+        
+
+            var check = inputs.test;
+            var str = "";
+            for(let i = 0; i < check.length;i++){      
+                if(check[i].checked == true){
+                    str = str + " " + check[i].value;
+                    document.getElementById("welcom").innerHTML = ("Chào mừng " +inputs["firstName"].value + " "+ inputs["lastName"].value+"<br>" +" Sở thích của bạn: " +str);
+                }
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

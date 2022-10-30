@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8 bài 1</title>
+</head>
+<body>
+    <h2>up load 1 file</h2>
+    <input type="file" onchange="uploadFile(this.files)">  
+    <div id="mess"> </div>
+    <br>
+    <h2>up load nhiều file</h2>
+    <input type="file" multiple onchange="uploadFile2(this.files)">  
+    <div id="mes2"> </div>
+
+    <script>
+        let mess = document.getElementById("mess");
+        function uploadFile(files) {
+            console.log(files[0]);
+            mess.innerText = files[0].name;
+        }
+        let mess2 = document.getElementById("mess2");
+        function uploadFile2(files) {
+            for(let i = 0; i < files.length; i++){
+                mess2.innerHTML += files[i].name + "<br>";
+            }
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7 bài 4</title>
+    <style>
+        *{
+            margin: 0 auto;
+            
+        }
+        .stars {
+            text-align: center;
+            margin-top: 30px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .star {
+           
+            font-size: 6em;
+            color: #ddd;
+            display: inline-block;
+        }
+        .orange{
+            color: orange;
+        }
+        .output{
+            text-align: center;
+            background-color: #ddd;
+            width: 300px;
+            font-size: 25px;
+        }
+    </style>
+    
+</head>
+<body>
+    <ul class="stars">
+        <li class="star">&#10029;</li>
+        <li class="star">&#10029;</li>
+        <li class="star">&#10029;</li>
+        <li class="star">&#10029;</li>
+        <li class="star">&#10029;</li>
+    </ul>
+    <div class="output"></div>
+
+
+    <script>
+        const starsUL = document.querySelector(".stars");
+        const output = document.querySelector(".output");
+
+        const stars = document.querySelectorAll(".star");
+        stars.forEach((star,index) => {
+            star.starValue = (index + 1);
+            star.addEventListener("click",starRate);
+        });
+
+        function starRate(e) {
+            output.innerHTML = `You Rated this ${e.target.starValue} stars`;
+            stars.forEach((star,index) => {
+                if(index < e.target.starValue){
+                    star.classList.add("orange");
+                }else {
+                    star.classList.remove("orange");
+                }
+            });
+        }
+
+
+    </script>
+
+
+</body>
+</html>

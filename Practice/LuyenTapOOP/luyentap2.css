@@ -1,0 +1,29 @@
+
+.form{
+    width: 400px;
+    height: 200px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    padding: 10px;
+}
+.form a{
+    font-size: 25px;
+    
+}
+.form .a1{
+    font-size: 20px;
+    padding-top: 10px;
+    margin-left: 150px;
+    color: black;
+}
+.chon{
+    display: none;
+}
+.form button{
+    width: 100px;
+    height: 40px;
+    margin-left: 100px;
+}
+.form input{
+    height: 30px;
+}

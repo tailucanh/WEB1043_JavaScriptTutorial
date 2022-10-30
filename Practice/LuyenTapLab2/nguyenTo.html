@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số nguyên tố</title>
+    <script src="app.js"></script>
+    <style>
+        i{
+            padding:40px; 
+            font-size: 30px;
+        }
+        input{
+            margin-left: 30px;
+            height: 30px;
+            margin-bottom: 30px;
+        }
+        .button{
+            margin-left: 100px;
+            margin-bottom: 35px;
+            height: 40px; 
+            width: 100px;
+        }
+        .iKq{
+            padding:40px; 
+            font-size: 30px; 
+            color: red;
+        }
+        .kq{
+            color: rgb(218, 102, 20);
+        }
+    </style>
+</head>
+<body>
+
+    <form name="PTB1From">
+        <i >Nhập số: </i><input type="text" name="number" id="n"><br>
+        <input class="button" type="button" value="Kiểm tra" onclick="soNguyenTo();"> <br>
+
+        <i class="iKq">Kết quả: </i>  <i class="kq" id="kq"></i> 
+    </form> 
+
+    
+</body>
+</html>

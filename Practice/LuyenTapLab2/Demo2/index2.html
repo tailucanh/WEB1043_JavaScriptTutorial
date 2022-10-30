@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+
+    
+
+
+
+
+        <div id="red">drg</div>
+        <div id="orange">gaàf</div>
+        <div id="yellow">fgh</div>
+        <div id="green">fgh</div>
+        <div id="blue">fgh</div>
+        <div id="indigo">fgh</div>
+        <div id="violet">fh</div>
+
+        <script>
+            function rainbowcolor(id) {
+                var divs = document.getElementsByTagName("div");
+                for(var i = 0; i < divs.length; i++){
+                    divs[i].style.backgroundColor = divs[i].id;
+                }
+            }
+          
+        </script>
+
+        <button onclick="rainbowcolor(this)">Click</button> 
+</body>
+</html>

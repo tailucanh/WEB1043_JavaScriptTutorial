@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 7 BÀI 5</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .container{
+            margin: auto;
+            margin-top: 80px;
+            width: 40%;
+            box-shadow: 5px 5px white;
+            padding: 10px;
+            border: 1px solid gray;
+        }
+        .title{
+            font-size: 1.6em;
+            font-weight: bold;
+            color: rgb(221, 82, 82);
+            text-align: center;
+        }
+        .form-group{
+            display: block;
+            margin: 5px;
+            margin-bottom: 20px;
+        }
+        .form-label{
+    
+            font-size: 25px;
+            margin: 5px;
+        }
+        .form-control{
+            float: right;
+            width: 200px;
+            padding: 3px;
+            margin-right: 50px;
+        }
+        .borger{
+            float: right;
+            margin-right: 10px;
+            font-size: 21px;
+        }
+        .btns{
+             text-align: center;
+        }
+        #formship{
+            display: none;
+        }
+        button{
+           width: 100px;
+           height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Đặt hàng</div>
+        <hr>
+        <form action="" onsubmit="return validateFrom()">
+        <div class="form-group">
+            <lable class="form-label">Sản phẩm</lable>
+            <input type="text" class="form-control" id="product">
+        </div>
+        <div class="form-group">
+            <lable class="form-label">Loại sản phẩm</lable>
+            <select name="" id="category" class="form-control">
+                <option value="">Chọn loại sản phẩm</option>
+                <option value="mt">Máy tính</option>
+                <option value="dt">Điện thoại</option>
+                <option value="lt">Laptop</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <lable class="form-label">Đơn giá</lable>
+            <input type="number" class="form-control" id="price">
+        </div>
+
+        <div class="form-group">
+            <lable class="form-label">Nơi nhận hàng</lable>
+            <div class="borger">
+                <input name="place"  type="radio" class="form-control-rc" id="place" onclick="hienThi(false)"> Nội thành
+                <input name="place" type="radio" class="form-control-rc" id="place"  onclick="hienThi(true)"> Ngoại thành 
+            </div>
+        </div>
+        <div class="form-group" id="formship">
+            <lable class="form-label">Phí vận chuyển</lable>
+            <input type="number" class="form-control" id="ship" value="20000">
+        </div>
+        <div class="btns">
+            <button class="btn"> Đặt hàng </button>
+        </div>
+
+        </form>
+    </div>
+
+
+        <script>
+            function hienThi(visible){
+                var ship = document.getElementById("formship");
+                ship.style.display = visible ? "block": "none";
+            }
+
+            function validateFrom() {
+                var sp = document.getElementById("product");
+                if(sp.value.length == 0){
+                    alert("Không được để trống tên!")
+                    return false;
+                }
+
+                var price = document.getElementById("price");
+                if(price.value.length == 0){
+                    alert("Hãy nhập số !")
+                    return false;
+                }else if(parseFloat(price.value) <= 0){
+                    alert("Hãy nhập số dương!")
+                    return false;
+                }
+
+                var loai = document.getElementById('category');
+                        if(loai.value.length == 0){
+                    alert('Vui lòng chọn loại sản phẩm!');
+                    return false;
+                } 
+
+                var radios = document.getElementsByName('place');
+                if(!radios[0].checked && !radios[1].checked){
+                    alert('Vui lòng chọn nơi nhận hàng!');
+                    return false;
+                }
+                alert('Chúc mừng bạn đã nhập đúng');
+                return true; 
+
+            }
+
+        </script>
+
+    
+</body>
+
+</html>

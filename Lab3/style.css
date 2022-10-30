@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.title{
+    margin: 0 auto;
+    width: 400px;
+    height: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.title h1{
+    font-size: 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(236, 166, 178);
+}
+.title h1:hover{
+    color: rgb(246, 188, 197);
+}
+.calculator{
+    margin:  0 auto;
+    width: 500px;
+    height: 350px;
+    padding: 0;
+    margin-top: 5px;
+   
+}
+.calculator button{
+    margin: 5px;
+    width: 100px;
+    height: 70px;
+    border: none;
+    outline: none;
+    box-shadow:  1px 1px 2px 2px rgb(247, 204, 210);
+    color: rgb(185, 6, 182);
+    font-size: 25px;
+    background-color: rgb(254, 214, 220);
+}
+.calculator button:hover{
+    border: none;
+    outline: none;
+    box-shadow:  1px 1px 2px 2px rgb(243, 188, 197);
+    background-color:rgb(243, 188, 197);
+}
+
+.ketqua{
+    display: flex;
+     margin: 0 auto;
+    width: 440px;
+}
+.ketqua .hienThi{
+    margin-right: 15px;
+    width: 287px;
+    height: 40px;
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    box-shadow:  1px 1px 2px 2px rgb(247, 204, 210);
+    color: #de8d00;
+    font-size: 25px;
+    background-color: rgb(254, 214, 220);
+
+}
+
+.ketqua .output{
+    margin: 0 auto;
+    width: 135px;
+    height: 40px;
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    box-shadow:  1px 1px 2px 2px rgb(247, 204, 210);
+    color: #de8d00;
+    font-size: 25px;
+    background-color: rgb(254, 214, 220);
+ 
+}
+
+.h1{
+    font-size: 70px;
+    margin-top: 40px;
+    color: rgb(59, 210, 221);
+    text-shadow: 0 2px 6px rgb(59, 210, 221);
+}
+h2{
+    font-size: 35px;
+    margin-top: 40px;
+    color: rgb(221, 141, 216);
+    text-shadow: 0 2px 2px rgb(207, 148, 232);
+    font-family:'Courier New', Courier, monospace;
+}
+.gr_btn{
+    margin:0 auto;
+    width: 550px;
+    height:80px;
+    display: flex;
+
+}
+.gr_btn button {
+    margin: 20px 20px 0px 20px;
+    background-image: linear-gradient(135deg, #008aff, #86d472);
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #f3f3f3;
+    display: block;
+    height: 50px;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 4px;
+    position: relative;
+    text-decoration: none;
+    width: 7em;
+    z-index: 2;
+    border: none
+  }
+  
+.gr_btn button:hover {
+    color: #fff;
+    background-image: linear-gradient(135deg, #86d472, #008aff);
+  }
+.output{
+    margin:  0 auto;
+    margin-top: 50px;
+    width: 900px;
+    height: 50px;
+    
+  }
+.output .title{
+    font-size: 20px;
+    margin-right: 20px;
+    padding-left: 60px;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.output .choise{
+    font-size: 20px;
+    color: rgb(87, 174, 212);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}

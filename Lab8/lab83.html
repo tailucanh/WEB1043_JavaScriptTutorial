@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab8 bài 3</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <h1>Custom HTML5 Video Player</h1>
+        <div id="player-container" >
+            <video id="myplayer" width="650px" height="370px">
+                <source src="video.mp4" type="video/mp4">
+                Your browes does not support HTML5 Video
+            </video>
+            <div id="controls">
+                <button onclick="playPause()">Play/Pause</button>
+                <button onclick="stopVideo()">Stop</button>
+                <button onclick="replaceVideo()">Replace</button>
+                <button onclick="increaseVolum()">Volume (+)</button>
+                <button onclick="decreaseVolum()">Volume (-)</button>
+                <button onclick="muteVolume()">Mute/Unmute</button>
+            </div>
+        </div>
+    </div>
+   
+    
+    <script>
+        var player = document.getElementById("myplayer");
+        function playPause(){
+            player.paused ?   player.play() :  player.pause();
+        }
+
+        function stopVideo(){
+            player.pause();
+            if(player.currentTime){
+                player.currentTime = 0;            }
+        }
+
+        function replaceVideo(){
+            player.currentTime = 0;
+            player.play();           
+         }
+
+         function increaseVolum(){
+           if(player.volume < 1){
+               player.volume = parseFloat(player.volume + 0.1).toFixed(1);
+           }       
+         }
+        
+         function decreaseVolum(){
+           if(player.volume > 1){
+               player.volume = parseFloat(player.volume - 0.1).toFixed(1);
+           }       
+         }
+         function muteVolume(){
+             if(player.muted ){
+                 player.muted = false;
+             }else {
+                player.muted = true;
+             }
+         }
+        
+
+
+
+    </script>
+</body>
+</html>

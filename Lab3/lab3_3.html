@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 - Bài 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+
+</head>
+<body>
+    <div class="title"> <h1>CALCULATOR</h1> </div>
+
+    <div class="ketqua">
+        <span class="hienThi" id="hienThi" onclick="thucHien()"></span>
+         <span class="output" id="output" onclick="thucHien()" ></span>
+     </div>
+     
+    <div class="calculator">
+        <button onclick="toanHang(7)">7</button>
+        <button onclick="toanHang(8)">8</button>
+        <button onclick="toanHang(9)">9</button>
+        <button onclick="toanTu('+')">+</button>
+        <button onclick="toanHang(4)">4</button>
+        <button onclick="toanHang(5)">5</button>
+        <button onclick="toanHang(6)">6</button>
+        <button onclick="toanTu('-')">-</button>
+        <button onclick="toanHang(1)">1</button>
+        <button onclick="toanHang(2)">2</button>
+        <button onclick="toanHang(3)">3</button>
+        <button onclick="toanTu('x')">x</button>
+        <button onclick="toanHang(0)">0</button>
+        <button onclick="reset()">C</button>
+        <button onclick="thucHien()">=</button>
+        <button onclick="toanTu('/')">/</button>
+    </div>
+
+</body>
+</html>

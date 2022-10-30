@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 bài 1</title>
+    <script src="lab5.js"></script>
+    <style>
+
+        .form{
+            margin: 0 auto;
+            margin-top: 100px;
+            width: 370px;
+            border: none;
+            padding: 30px;
+            box-shadow: 1px 1px 2px 2px gray;
+        }
+        label{
+            font-size: 25px;
+        }
+        hr{
+            float: left;
+            width: 300px;
+            
+        }
+    
+        input{
+          
+            height: 30px;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 1px 1px gray;
+            padding-left: 10px;
+        }
+        button{
+            width: 50px;
+            height: 30px;
+            margin-left: 10px;
+        }
+        h3{
+            padding-top: 10px;
+            color: rgb(215, 55, 103);
+        }
+        span{
+            size: 20px;
+            color: rgb(17, 29, 187);
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <label id="pro" data-price="1950">Iphone 9</label>
+        <input type="number" id="quantity">
+        <button type="button" onclick="display();">Ok</button>
+        <hr>
+        <h3>Name: <span id="name">?</span> </h3>
+        <h3>Amount: <span id="amount">?</span> </h3>
+    </div>
+
+    
+
+    
+</body>
+</html>

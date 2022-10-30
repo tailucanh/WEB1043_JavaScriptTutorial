@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7 bài 1</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: white;
+        }
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" ondrop="dDrop()" ondragover="nDrop() "> 1
+        <div id="dragme" draggable="true" ondragstart="dStart()"  >
+            Drag Me Please!
+        </div>
+    </div>
+
+    <div class="box" ondrop="dDrop()" ondragover="nDrop()"> 2</div>
+
+    <script>
+        let holderItem;
+
+        function dStart() {
+            holderItem =event.target;
+        }
+
+        function nDrop() {
+            event.preventDefault();
+        }
+
+        function dDrop() {
+            event.preventDefault();
+            if(event.target.className == "box"){
+                event.target.appendChild(holderItem);
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

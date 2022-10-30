@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 bài 2</title>
+    <script src="lab5.js"></script>
+    <style>
+        .form{
+            text-align: center;
+            margin-top: 10px;
+           width: 1100px;
+        }
+        .box1{
+            float: left;
+            margin-left: 100px;
+        }
+        .box2{
+            float: right;
+        }
+        table{
+       
+            border-collapse: collapse;
+            border: none;
+            outline: none;
+            box-shadow: 1px 1px 2px 1px gray
+        }
+        td{
+            box-shadow: 1px 1px gray;   
+            font-size: 20px;
+            padding: 10px 30px;
+        }
+        button{
+            width:70px;
+            height: 30px;
+            font-weight: bold;
+        }
+        h2{
+            font-size: 30px;
+            margin-top: 40px;
+            color: rgb(59, 210, 221);
+            text-shadow: 0 2px 6px rgb(59, 210, 221);
+        }
+        .h3{
+            font-size: 25px;
+            margin-top: 40px;
+            color: rgb(221, 141, 216);
+            text-shadow: 0 2px 2px rgb(207, 148, 232);
+            font-family:'Courier New', Courier, monospace;
+        }
+        #tong{
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form">
+        <div class="box1">
+                <h2>Danh mục hàng hóa</h2>
+            <table >
+                <tr>
+                    <td>Iphone 9</td>
+                    <td>&2700</td>
+                    <td><button onclick="add(this)">Thêm</button> </td>
+                </tr>
+                <tr>
+                    <td>Sam sung</td>
+                    <td>&1500</td>
+                    <td><button onclick="add(this)" >Thêm</button> </td>
+                </tr>
+                <tr>
+                    <td>Nokia 2022</td>
+                    <td>&1200</td>
+                    <td><button onclick="add(this)">Thêm</button> </td>
+                </tr>
+                <tr>
+                    <td>Sony Xperia</td>
+                    <td>&1700</td>
+                    <td><button onclick="add(this)">Thêm</button> </td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="box2">
+            <h2>Giỏ hàng của bạn</h2>
+            <table  id="cart"></table>
+            <h3 class="h3">Tổng tiền: <span id="tong">0</span></h3>
+        </div>
+      
+
+    </div>
+    
+</body>
+</html>
